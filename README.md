@@ -1,7 +1,7 @@
 # terraform-null-jsonencode-no-replacements
 A module to do a jsonencode without replacing special characters.
 
-Per the `jsonencode` [documentation](https://www.terraform.io/docs/language/functions/jsonencode.html),  
+Per the `jsonencode` [documentation](https://www.terraform.io/docs/language/functions/jsonencode.html),
 
 > When encoding strings, this function escapes some characters using Unicode escape sequences: replacing <, >, &, U+2028, and U+2029 with \u003c, \u003e, \u0026, \u2028, and \u2029. This is to preserve compatibility with Terraform 0.11 behavior.
 
@@ -23,7 +23,7 @@ locals {
 }
 
 module "jsonencode_no_replacements" {
-  source  = "Invicton-Labs/jsonencode-no-replacements/null"
+  source  = "Kalepa/jsonencode-no-replacements/null"
   object = local.to_encode
 }
 
